@@ -1,0 +1,12 @@
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/bin/Debug/ImageProcessing.exe
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/bin/Debug/ImageProcessing.pdb
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/bin/Debug/ImageProcessor.dll
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/bin/Debug/System.Drawing.Common.dll
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/bin/Debug/System.ValueTuple.dll
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/bin/Debug/ImageProcessor.xml
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/bin/Debug/System.ValueTuple.xml
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/obj/Debug/ImageProcessing.csprojAssemblyReference.cache
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/obj/Debug/ImageProcessing.csproj.CoreCompileInputs.cache
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/obj/Debug/ImageProcessing.csproj.CopyComplete
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/obj/Debug/ImageProcessing.exe
+/Users/javier/RiderProjects/ImageProcessing/ImageProcessing/obj/Debug/ImageProcessing.pdb
