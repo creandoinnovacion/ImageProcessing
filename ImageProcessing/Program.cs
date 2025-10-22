@@ -7,39 +7,39 @@ namespace ImageProcessing
 {
     internal static class Program
     {
-        private static void ChangeBitmap(Image image, Color color, string filePath)
+        private static void SaveImageWithBackgroundColor(Image sourceImage, Color backgroundColor, string outputFilePath)
         {
             using var imageFactory = new ImageFactory();
-            imageFactory.Load(image).Format(new JpegFormat {Quality = 90}).BackgroundColor(color).Save(filePath);
+            imageFactory.Load(sourceImage).Format(new JpegFormat {Quality = 90}).BackgroundColor(backgroundColor).Save(outputFilePath);
         }
 
         public static void Main()
         {
-            var stringArray = new[,]
+            var productConfigurations = new[,]
             {
                 {"d13be0da-b7c1-4a50-b720-d27c72da6bb8", "#ffffff"}
             };
-            for (var index = 0; index < stringArray.GetLength(0); index++)
+            for (var productIndex = 0; productIndex < productConfigurations.GetLength(0); productIndex++)
             {
-                var color = ColorTranslator.FromHtml(stringArray[index, 1]);
-                using (var image =
+                var backgroundColor = ColorTranslator.FromHtml(productConfigurations[productIndex, 1]);
+                using (var sourceImage =
                     Image.FromFile("/Users/javier/Projects/ImageProcessing/ImageProcessing/biometal.png"))
                 {
-                    ChangeBitmap(image, color,
-                        string.Concat("/Users/javier/Desktop/Productos/", stringArray[index, 0], ".jpg"));
+                    SaveImageWithBackgroundColor(sourceImage, backgroundColor,
+                        string.Concat("/Users/javier/Desktop/Productos/", productConfigurations[productIndex, 0], ".jpg"));
                 }
-                // using (var image =
+                // using (var sourceImage =
                 //     Image.FromFile("/Users/javier/Projects/ImageProcessing/ImageProcessing/mockup-3.png"))
                 // {
-                //     ChangeBitmap(image, color,
-                //         string.Concat("/Users/javier/Desktop/Productos/", stringArray[index, 0], "-3.jpg"));
+                //     SaveImageWithBackgroundColor(sourceImage, backgroundColor,
+                //         string.Concat("/Users/javier/Desktop/Productos/", productConfigurations[productIndex, 0], "-3.jpg"));
                 // }
-                //using (var image = Image.FromFile("/Users/javier/Projects/ImageProcessing/ImageProcessing/mockup-4.png"))
+                //using (var sourceImage = Image.FromFile("/Users/javier/Projects/ImageProcessing/ImageProcessing/mockup-4.png"))
                 //{
 
-                //    ChangeBitmap(image, color, string.Concat("/Users/javier/Desktop/Productos/", stringArray[i, 0], "-4.jpg"));
+                //    SaveImageWithBackgroundColor(sourceImage, backgroundColor, string.Concat("/Users/javier/Desktop/Productos/", productConfigurations[productIndex, 0], "-4.jpg"));
                 //}
-                Console.WriteLine(index);
+                Console.WriteLine(productIndex);
             }
         }
     }
